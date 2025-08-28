@@ -71,7 +71,7 @@ if __name__ == "__main__":
     fkey, hkey = fin.shared(hk), hr.shared(fk)
     assert fkey == hkey
 
-    msg = b"Confidential Financial Report Q3"
+    msg = b"Financial report 2025"
     enc = fin.aes_enc(msg, fkey)
     print(f"[Finance -> HR] Encrypted: {enc.hex()}")
     dec = hr.aes_dec(enc, hkey)
